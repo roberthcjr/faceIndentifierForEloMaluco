@@ -39,10 +39,10 @@ def detect_colors(path, imageResult):
 
     detected_colors.sort(key=lambda x: x[1])
     color_array = [color for color, _ in detected_colors[:4]]
-    result = [prefixo + sufixo for prefixo, sufixo in zip(color_array, imageResult)]
     if(len(color_array)< 4):
         voidIndex = imageResult.index("vzo")
-        result.insert(voidIndex, "vzo")
+        color_array.insert(voidIndex, "vzo")
+    result = [prefixo if prefixo == sufixo else prefixo + sufixo for prefixo, sufixo in zip(color_array, imageResult)]
     return result
     
 #DETECTOR DE PADRÂO
