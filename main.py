@@ -87,10 +87,9 @@ def load_pattern_images():
 def detect_pattern(path):
     [upper, middle, lower, void] = load_pattern_images()
     image = cv2.imread(path, cv2.IMREAD_GRAYSCALE)
-    blurred = cv2.GaussianBlur(image, (3, 3), 0)
 
     binary = cv2.adaptiveThreshold(
-        blurred, 255, 
+        image, 255, 
         cv2.ADAPTIVE_THRESH_GAUSSIAN_C, 
         cv2.THRESH_BINARY_INV, 
         15, 3
