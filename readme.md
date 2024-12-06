@@ -48,6 +48,12 @@ Follow the below steps to set up the project on your local machine:
     python main.py
     ```
 
+7. Insert your image input number:
+    ```bash
+    Qual input de imagem você deseja fazer o xml?(1, 2 ou 3)
+    1
+    ```
+
 ## Authors
 
 -   [Robert Junior](https://github.com/roberthcjr/)
